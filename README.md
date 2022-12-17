@@ -1,3 +1,3 @@
 # Canvas random color drawer
 
-Just go: https://git.congritta.com/random-circle-draw
+Just go to https://git.congritta.com/random-circle-draw and draw!

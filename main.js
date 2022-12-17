@@ -25,7 +25,7 @@ function drawArc(x = 0, y = 0, color = "#000") {
 
 function onDraw(e) {
 
-  if(e instanceof TouchEvent)
+  if(isTouchDevice())
     drawArc(
       e.touches[0].pageX,
       e.touches[0].pageY,
@@ -54,3 +54,10 @@ window.addEventListener("touchstart", (e) => {
 window.addEventListener("touchend", () => {
   window.removeEventListener("touchmove", onDraw);
 });
+
+/* Other functions */
+function isTouchDevice() {
+  return (('ontouchstart' in window) ||
+    (navigator.maxTouchPoints > 0) ||
+    (navigator.msMaxTouchPoints > 0));
+}
